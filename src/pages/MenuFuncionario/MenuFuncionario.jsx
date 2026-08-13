@@ -72,7 +72,7 @@ const MenuFuncionario = () => {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <Link className="dropdown-item" href="#">
+                  <Link className="" href="#">
                     Outra opção
                   </Link>
                 </li>
@@ -80,7 +80,7 @@ const MenuFuncionario = () => {
             </li>
 
             <li className="nav-item">
-              <Link className="nav-link disabled">Desativado</Link >
+              <Link className="btn btn-primary">Desativado</Link >
             </li>
           </ul>
 

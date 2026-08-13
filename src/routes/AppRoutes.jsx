@@ -11,6 +11,7 @@ import HomeFuncionario from "../pages/HomeFuncionario/HomeFuncionario"
 import ListarProduto from "../pages/ListarProduto/ListarProduto"
 import ListarCategoria from "../pages/ListarCategoria/ListarCategoria"
 import NovoProduto from "../pages/NovoProduto/NovoProduto"
+import ListarEstoque from "../pages/ListarEstoque/ListarEstoque"
 
 
 const AppRoutes = () =>{
@@ -46,6 +47,12 @@ const AppRoutes = () =>{
               path="/produtos/novo"
               element={<NovoProduto/>}
              />
+
+ <Route
+              path="/estoques"
+              element={<ListarEstoque/>}
+             />
+
 
 
           </Routes>

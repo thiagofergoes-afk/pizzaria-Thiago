@@ -122,8 +122,9 @@ const ListarProduto = () => {
         className={'btn btn-success'}
         >
           <i className="fas fa-plus">
-            Novo Produto
+          
             </i>
+              Novo Produto
         </Link>
 </div>
 

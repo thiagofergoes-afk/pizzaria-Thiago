@@ -1,16 +1,41 @@
+import React,{ useState, useEffect} from "react"
+
 import MenuFuncionario from "../MenuFuncionario/MenuFuncionario"
+import api from "../../services/api"
 
 const NovoProduto = () => {
+
+const [categorias, setCategorias] = useState([])
+
+const [categoriaId, setCategoriaId] = useState("")
+
+useEffect( ( ) =>{ 
+  api
+   .get("/categorias")
+   .then((response) => {
+      setCategorias(response.data.data)
+
+   })
+
+   .catch((error) => {
+      console.error(`Erro ao buscar a lista de categorias. ${error}`)
+
+   })
+},[])
+
+const escolherCategoria =(e) => {
+    setCategoriaId (e.target.value)
+
+}
+
 
   return (
 
      <div className="container">
         <MenuFuncionario/>
 
-           
-    
 
-            <form className="container-fluid p-4">
+        <form className="container-fluid p-4">
                 <div className="mb-3">
                     <label className="form-label">Nome:</label>
                     <input
@@ -48,7 +73,18 @@ const NovoProduto = () => {
                      required
                      >
                          <option value="">Selecione uma categoria</option>
-                     
+
+                  { 
+
+                     categorias
+                     .filter((cat)=> cat.codStatus === true)
+                     .map((cat)=>(
+                      <option key={cat.id} value={cat.id} >
+                          {cat.nome}
+                      </option>
+
+                    ))
+                  }
                      </select>
 
                 </div>
