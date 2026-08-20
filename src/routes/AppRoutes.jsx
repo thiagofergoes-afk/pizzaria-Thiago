@@ -12,7 +12,7 @@ import ListarProduto from "../pages/ListarProduto/ListarProduto"
 import ListarCategoria from "../pages/ListarCategoria/ListarCategoria"
 import NovoProduto from "../pages/NovoProduto/NovoProduto"
 import ListarEstoque from "../pages/ListarEstoque/ListarEstoque"
-
+import EditarProduto from "../pages/EditarProduto.jsx/EditaProduto"
 
 const AppRoutes = () =>{
 
@@ -53,6 +53,11 @@ const AppRoutes = () =>{
               element={<ListarEstoque/>}
              />
 
+
+ <Route
+              path="/produtos/editar/:id"
+              element={<EditarProduto/>}
+             />
 
 
           </Routes>
