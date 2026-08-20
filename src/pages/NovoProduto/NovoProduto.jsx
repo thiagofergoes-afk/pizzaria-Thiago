@@ -2,7 +2,12 @@
 import React,  {useState, useEffect} from "react"
 
 import MenuFuncionario from "../MenuFuncionario/MenuFuncionario"
+import CredentialUser from "../../components/CredentialUser"
+
+
 import api from "../../services/api"
+
+
 
 const NovoProduto = () => {
 
@@ -55,6 +60,7 @@ const NovoProduto = () => {
     return (
         <div className="container">
             <MenuFuncionario/>
+            <CredentialUser title="Cadastro de Produto"/>
 
             <form onSubmit={enviarProduto} className="container-fluid p-4">
                 <div className="mb-3">
