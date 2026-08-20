@@ -24,7 +24,6 @@ const ListarProduto = () => {
    api
    .get("/produtos")
    .then((response)=>{
-    // deu certo :)
     // console.log(response.data.data)
     setProdutos(response.data.data)
     
