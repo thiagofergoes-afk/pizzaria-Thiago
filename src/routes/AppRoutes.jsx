@@ -1,10 +1,9 @@
-
 import {
-    HashRouter,
     BrowserRouter,
+    HashRouter,
     Routes,
     Route
-
+ 
 }
 from "react-router-dom"
 import HomeFuncionario from "../pages/HomeFuncionario/HomeFuncionario"
@@ -12,59 +11,53 @@ import ListarProduto from "../pages/ListarProduto/ListarProduto"
 import ListarCategoria from "../pages/ListarCategoria/ListarCategoria"
 import NovoProduto from "../pages/NovoProduto/NovoProduto"
 import ListarEstoque from "../pages/ListarEstoque/ListarEstoque"
-import EditarProduto from "../pages/EditarProduto.jsx/EditaProduto"
-
+import EditarProduto from "../pages/EditarProduto.jsx/EditarProduto"
+ 
 const AppRoutes = () =>{
-
-
+ 
+ 
     return (
-        <HashRouter> 
+     <HashRouter>
           <Routes>
-            
+           
              <Route
               path="/"
               element={<HomeFuncionario/>}
              />
-
+ 
              <Route
               path="/home"
               element={<HomeFuncionario/>}
              />
-
+ 
              <Route
               path="/produtos"
               element={<ListarProduto/>}
              />
-
-             
-                <Route
-              path="/Categorias"
-              element={<ListarCategoria/>}
-             />
-
-
-        <Route
-              path="/produtos/novo"
-              element={<NovoProduto/>}
-             />
-
- <Route
-              path="/estoques"
-              element={<ListarEstoque/>}
-             />
-
-
- <Route
+ 
+             <Route
               path="/produtos/editar/:id"
               element={<EditarProduto/>}
              />
-
-
+ 
+              <Route
+              path="/Categorias"
+              element={<ListarCategoria/>}
+             />
+             <Route
+              path="/Produtos/Novo"
+              element={<NovoProduto/>}
+             />
+ 
+             <Route
+              path="/estoque"
+              element={<ListarEstoque/>}
+             />
+ 
           </Routes>
-   </HashRouter>
-
+     </HashRouter>
          
     )
 }
-
+ 
 export default AppRoutes
